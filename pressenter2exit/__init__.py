@@ -1,6 +1,8 @@
 
 import threading
 
+__version__ = '0.0.1'
+
 
 class PressEnter2Exit(threading.Thread):
     def __init__(self):
