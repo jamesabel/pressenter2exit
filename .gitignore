@@ -162,3 +162,5 @@ pypi_register.sh
 make_venv*.sh
 .idea/**/*.xml
 .idea/*.iml
+requirements.txt
+!test/requirements.txt
