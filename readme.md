@@ -40,3 +40,24 @@ print('Done! Exiting after %f seconds.' % (time() - start_time))
 
 
 ```
+
+Output when enter is pressed mid-run:
+
+```
+Press enter to exit:
+I've been waiting for 0.000005 seconds.
+I've been waiting for 4.000108 seconds.
+Done! Exiting after 5.331482 seconds.
+```
+
+Output when the program is allowed to finish on its own:
+
+```
+Press enter to exit:
+I've been waiting for 0.000006 seconds.
+I've been waiting for 4.004918 seconds.
+I've been waiting for 8.007299 seconds.
+I've been waiting for 12.009813 seconds.
+I've been waiting for 16.012574 seconds.
+Done! Exiting after 20.016182 seconds.
+```
