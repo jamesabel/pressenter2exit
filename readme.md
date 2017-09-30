@@ -14,6 +14,9 @@ a need to exit them in a clean manner (as opposed to, for example, pressing ctrl
 to cleanly interrupt the processing after it's done with the current data set.
 - Programs that run in an 'infinite loop' waiting for input data or files to appear.  You'd 
 like to be able to exit the 'infinite loop' in a controlled way.
+- Long-running system tests where you want to run, say, overnight but when you return you 
+want to exit in a controlled way so you can get proper status and statistics (again, as 
+opposed to ctrl-c).
 
 The benefit to exiting in a controlled way is that you don't end up with a data set 
 partially processed and/or in an unknown state.  By using pressenter2exit, processing 
