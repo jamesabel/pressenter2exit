@@ -11,17 +11,17 @@ a need to exit them in a clean manner (as opposed to, for example, pressing ctrl
 ## Examples ##
 
 - Programs that 'crunch' on a large number of input data sets, but you want to be able 
-to cleanly interrupt the processing after it's done with the current data set.
-- Programs that run in an 'infinite loop' waiting for input data or files to appear.  You'd 
+to cleanly interrupt the program after it's done with the current data set.
+- Programs that run in an 'infinite loop' waiting for some sort of input data to appear.  You'd 
 like to be able to exit the 'infinite loop' in a controlled way.
 - Long-running system tests where you want to run, say, overnight but when you return you 
-want to exit in a controlled way so you can get proper status and statistics (again, as 
+want to exit in a controlled way so you can get proper status and statistics (as 
 opposed to ctrl-c).
 
 The benefit to exiting in a controlled way is that you don't end up with a data set 
-partially processed and/or in an unknown state.  By using pressenter2exit, processing 
-that has been done so far can be useful, and not merely thrown away which can happen if 
-a program is forcefully and immediately aborted.
+partially processed, in an unknown state, and/or be unable to output statistics from the run. By 
+using pressenter2exit, processing that has been done so far can be useful and not merely 
+thrown away, which can happen if a program is forcefully and immediately aborted.
 
 ## Example Code ##
 
@@ -64,3 +64,8 @@ I've been waiting for 12.009813 seconds.
 I've been waiting for 16.012574 seconds.
 Done! Exiting after 20.016182 seconds.
 ```
+
+## Platform Support ##
+
+pressenter2exit doesn't use any platform specific libraries, so it should run on any platform that 
+supports the CLI (e.g. Windows, MacOS, Linux, etc.).
