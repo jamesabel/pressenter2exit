@@ -47,7 +47,7 @@ class PressEnter2Exit(threading.Thread):
 
     def get_reaction_time(self):
         """
-        get how long it too the program that uses this class to react to the pressing of enter
+        get how long it took the program that uses this class to react to the pressing of enter
 
         :return: the time from when enter was pressed to now (in seconds)
         """
