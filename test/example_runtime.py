@@ -18,6 +18,6 @@ while exit_control.is_alive() and time() - start_time < 20.0:
     exit_control.join(4.0)  # use join() instead of time.sleep() to ensure an immediate exit
 
 print('Done! Exiting after %f seconds.' % (time() - start_time))
-print('Time from start to exit was %f seconds' % exit_control.get_duration())
-print('Time from start to enter pressed was %s seconds' % str(exit_control.get_enter_duration()))  # can be None
-print('Reaction time was %f seconds' % exit_control.get_reaction_time())
+print('Time from start to exit was %f seconds.' % exit_control.get_duration())
+print('Time from start to enter pressed was %s seconds.' % str(exit_control.get_enter_duration()))  # can be None
+print('Reaction time was %f seconds.' % exit_control.get_reaction_time())
