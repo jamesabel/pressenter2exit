@@ -1,0 +1,2 @@
+include index.rst
+include pressenter2exit\__init__.py
