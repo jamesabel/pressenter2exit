@@ -23,10 +23,10 @@ class PressEnter2Exit(threading.Thread):
         """
         return self.start_time
 
-    def get_exit_duration(self):
+    def get_enter_duration(self):
         """
         time from instantiation to when enter was pressed
-        :return: time in seconds from instantiation to when enter was pressed or None if enter not yet pressed
+        :return: time from instantiation to when enter was pressed or None if enter not yet pressed (in seconds)
         """
         if self.exit_time is None:
             return None
@@ -35,6 +35,16 @@ class PressEnter2Exit(threading.Thread):
     def get_duration(self):
         """
         time since instantiation
-        :return: time in seconds since instantiation
+        :return: time since instantiation (in seconds)
         """
         return time.time() - self.start_time
+
+    def get_reaction_time(self):
+        """
+        get how long it too the program that uses this class to react to the pressing of enter
+        :return: the time from when enter was pressed to now (in seconds)
+        """
+        if self.exit_time is None:
+            # enter was never hit, so our reaction time is zero
+            return 0.0
+        return time.time() - self.exit_time
