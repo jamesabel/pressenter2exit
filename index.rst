@@ -1,20 +1,6 @@
 
-.. Welcome to pressenter2exit's documentation!
-.. ===========================================
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
-
 pressenter2exit (Press Enter To Exit)
 =====================================
-
-.. Indices and tables
-.. ==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
 
 pressenter2exit (“Press Enter To Exit”) facilitates long-running CLI
 programs to exit in clean and controlled way.
