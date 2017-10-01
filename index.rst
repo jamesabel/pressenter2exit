@@ -44,7 +44,6 @@ Example Code
     from pressenter2exit import PressEnter2Exit
 
     exit_control = PressEnter2Exit()
-    print()  # optional, but without it the first print would be on the same line as the input
 
     start_time = time()
     # loops until enter is pressed or we reach the end of our run time

@@ -2,7 +2,7 @@
 import time
 import threading
 
-__version__ = '0.0.6'
+__version__ = '0.0.7'
 
 
 class PressEnter2Exit(threading.Thread):
@@ -22,7 +22,5 @@ class PressEnter2Exit(threading.Thread):
         :return: run time in seconds
         """
         if self.end_time is None:
-            # not done yet
-            return None
+            self.end_time = time.time()
         return self.end_time - self.start_time
-
