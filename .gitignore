@@ -166,3 +166,4 @@ requirements.txt
 !test/requirements.txt
 make_venv*.bat
 set_path.bat
+todo/
