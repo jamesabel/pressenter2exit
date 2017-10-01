@@ -1,13 +1,18 @@
 
+import os
 from setuptools import setup
 
 import pressenter2exit
 
 application_name = 'pressenter2exit'
 
+with open(os.path.join('docs', 'source' 'index.rst')) as f:
+    long_description = '\n' + f.read()
+
 setup(
     name=application_name,
     description='Facilitates exit of a Python CLI program in a controlled way',
+    long_description=long_description,
     version=pressenter2exit.__version__,
     author='James Abel',
     author_email='j@abel.co',

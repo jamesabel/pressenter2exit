@@ -4,6 +4,9 @@ pressenter2exit (Press Enter To Exit)
 pressenter2exit (“Press Enter To Exit”) facilitates long-running CLI
 programs to exit in clean and controlled way.
 
+Documentation: `pressenter2exit.readthedocs.io
+<http://pressenter2exit.readthedocs.io/en/latest/>`_.
+
 The Problem
 ===========
 
