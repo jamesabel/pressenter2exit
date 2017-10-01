@@ -6,6 +6,9 @@ __version__ = '0.0.8'
 
 
 class PressEnter2Exit(threading.Thread):
+    """
+    Press Enter to Exit class.
+    """
     def __init__(self):
         super().__init__(daemon=True)
         self.start_time = time.time()
