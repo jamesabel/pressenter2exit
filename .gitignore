@@ -155,6 +155,7 @@ venv.bak/
 
 # jca
 pypi.sh
+pypi.bat
 testpypi.sh
 pypi_register.sh
 # since we only need regular python (no packages) don't both to put make_venv.sh on git

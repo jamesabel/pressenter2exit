@@ -6,7 +6,7 @@ import pressenter2exit
 
 application_name = 'pressenter2exit'
 
-with open(os.path.join('docs', 'source' 'index.rst')) as f:
+with open(os.path.join('docs', 'source', 'index.rst'), encoding='utf-8') as f:
     long_description = '\n' + f.read()
 
 setup(
