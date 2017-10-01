@@ -7,7 +7,7 @@ __version__ = '0.0.9'
 
 class PressEnter2Exit(threading.Thread):
     """
-    Press Enter to Exit class.
+    Press Enter to Exit class.  Facilitates exit of a Python CLI program in a controlled way.
     """
     def __init__(self):
         super().__init__(daemon=True)
@@ -22,6 +22,7 @@ class PressEnter2Exit(threading.Thread):
     def get_start_time(self):
         """
         get time of instantiation (in seconds since epoch)
+
         :return: time of instantiation (in seconds since epoch)
         """
         return self.start_time
@@ -29,6 +30,7 @@ class PressEnter2Exit(threading.Thread):
     def get_enter_duration(self):
         """
         time from instantiation to when enter was pressed
+
         :return: time from instantiation to when enter was pressed or None if enter not yet pressed (in seconds)
         """
         if self.exit_time is None:
@@ -38,6 +40,7 @@ class PressEnter2Exit(threading.Thread):
     def get_duration(self):
         """
         time since instantiation
+
         :return: time since instantiation (in seconds)
         """
         return time.time() - self.start_time
@@ -45,6 +48,7 @@ class PressEnter2Exit(threading.Thread):
     def get_reaction_time(self):
         """
         get how long it too the program that uses this class to react to the pressing of enter
+
         :return: the time from when enter was pressed to now (in seconds)
         """
         if self.exit_time is None:
