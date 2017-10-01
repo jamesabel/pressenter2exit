@@ -6,7 +6,7 @@ import pressenter2exit
 
 application_name = 'pressenter2exit'
 
-with open(os.path.join('docs', 'source', 'index.rst'), encoding='utf-8') as f:
+with open('index.rst', encoding='utf-8') as f:
     long_description = '\n' + f.read()
 
 setup(
@@ -21,6 +21,7 @@ setup(
     download_url='https://github.com/jamesabel/pressenter2exit/archive/master.zip',
     keywords=['cli', 'exit', 'control'],
     packages=[application_name],
+    package_data={'': ['index.rst']},
     install_requires=[],
     classifiers=[]
 )
