@@ -5,6 +5,8 @@
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
+   
+   modules
 
 pressenter2exit (Press Enter To Exit)
 =====================================
