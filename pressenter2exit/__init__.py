@@ -9,7 +9,11 @@ class PressEnter2Exit(threading.Thread):
     """
     Press Enter to Exit class.  Facilitates exit of a Python CLI program in a controlled way.
     """
-    def __init__(self, message=None):
+    def __init__(self, message='Enter pressed'):
+        """
+
+        :param message: message to be displayed after a enter hit (if None, no message is displayed).  Default is 'Enter pressed'
+        """
         super().__init__(daemon=True)
         self.message = message
         self.start_time = time.time()
