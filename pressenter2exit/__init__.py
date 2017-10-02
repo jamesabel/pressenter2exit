@@ -11,6 +11,7 @@ class PressEnter2Exit(threading.Thread):
     """
     def __init__(self, message='Enter pressed'):
         """
+        constructor
 
         :param message: message to be displayed after a enter hit (if None, no message is displayed).  Default is 'Enter pressed'
         """
@@ -21,6 +22,9 @@ class PressEnter2Exit(threading.Thread):
         self.start()
 
     def run(self):
+        """
+        run method
+        """
         input('Press enter to exit:')
         if self.message:
             print(self.message)
