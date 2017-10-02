@@ -2,21 +2,24 @@
 import time
 import threading
 
-__version__ = '0.0.9'
+__version__ = '0.0.10'
 
 
 class PressEnter2Exit(threading.Thread):
     """
     Press Enter to Exit class.  Facilitates exit of a Python CLI program in a controlled way.
     """
-    def __init__(self):
+    def __init__(self, message=None):
         super().__init__(daemon=True)
+        self.message = message
         self.start_time = time.time()
         self.exit_time = None
         self.start()
 
     def run(self):
         input('Press enter to exit:')
+        if self.message:
+            print(self.message)
         self.exit_time = time.time()
 
     def get_start_time(self):
