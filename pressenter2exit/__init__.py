@@ -13,7 +13,7 @@ class PressEnter2Exit(threading.Thread):
         """
         constructor
 
-        :param message: message to be displayed after a enter hit (if None, no message is displayed).  Default is 'Enter pressed'
+        :param message: message to be displayed after a enter hit (if None, no message is displayed).  Default is 'Enter pressed'.
         """
         super().__init__(daemon=True)
         self.message = message
