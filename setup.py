@@ -1,8 +1,7 @@
 
-import os
 from setuptools import setup
 
-import pressenter2exit
+__version__ = '0.0.12'
 
 application_name = 'pressenter2exit'
 
@@ -13,7 +12,7 @@ setup(
     name=application_name,
     description='Facilitates exit of a Python CLI program in a controlled way',
     long_description=long_description,
-    version=pressenter2exit.__version__,
+    version=__version__,
     author='James Abel',
     author_email='j@abel.co',
     license='MIT License',

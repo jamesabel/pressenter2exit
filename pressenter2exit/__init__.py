@@ -2,8 +2,6 @@
 import time
 import threading
 
-__version__ = '0.0.11'
-
 
 class PressEnter2Exit(threading.Thread):
     """
