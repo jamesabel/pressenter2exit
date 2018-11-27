@@ -26,9 +26,15 @@ class PressEnter2Exit(threading.Thread):
         run method
         """
         if self.pre_message is None:
-            input()  # pre message of None causes the input to be silent
+            try:
+                input()  # pre message of None causes the input to be silent
+            except EOFError:
+                pass
         else:
-            input(self.pre_message)
+            try:
+                input(self.pre_message)
+            except EOFError:
+                pass
         if self.post_message:
             print(self.post_message)
         self.exit_time = time.time()
