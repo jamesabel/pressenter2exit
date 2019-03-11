@@ -1,12 +1,12 @@
 # pressenter2exit (Press Enter To Exit) #
 
-pressenter2exit ("Press Enter To Exit") facilitates long-running CLI programs to 
+pressenter2exit ("Press Enter To Exit") facilitates long-running CLI or GUI programs to 
 exit in clean and controlled way.
 
 # The Problem #
 
-Long running CLI (command line interface) programs can be useful, but there is often 
-a need to exit them in a clean manner (as opposed to, for example, pressing ctrl-c).
+Long running programs can be useful, but there is often a need to exit them in a clean 
+manner (as opposed to, for example, pressing ctrl-c).
 
 ## Examples ##
 
@@ -63,6 +63,11 @@ I've been waiting for 12.009813 seconds.
 I've been waiting for 16.012574 seconds.
 Done! Exiting after 20.016182 seconds.
 ```
+
+## Multiprocessing ##
+
+Use `PressEnter2ExitGUI` for programs that use multiprocessing (e.g. create processes).  Since Python 
+blocks all processes on `stdin` input, the GUI version must be used.
 
 ## Platform Support ##
 
