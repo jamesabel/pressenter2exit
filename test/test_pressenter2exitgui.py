@@ -1,7 +1,7 @@
 
 from time import time
 
-from pressenter2exit import PressEnter2ExitGUI, application_name
+from pressenter2exit import PressEnter2ExitGUI, __application_name__
 
 
 def test_pressenter2exitgui():
@@ -9,7 +9,7 @@ def test_pressenter2exitgui():
     start_time = time()
     timeout = 5.0
 
-    exit_control = PressEnter2ExitGUI(title=application_name, pre_message=f"press enter or wait for the program to timeout in {timeout} seconds:")
+    exit_control = PressEnter2ExitGUI(title=__application_name__, pre_message=f"press enter or wait for the program to timeout in {timeout} seconds:")
 
     # loops until return is pressed or we reach the end of our run time
     while exit_control.is_alive() and time() - start_time < timeout:
