@@ -1,8 +1,16 @@
 
 import time
 import multiprocessing
-import tkinter.messagebox
-import tkinter
+import logging
+
+from pressenter2exit import __application_name__
+
+try:
+    import tkinter.messagebox
+    import tkinter
+    tkinter_found = True
+except ModuleNotFoundError:
+    tkinter_found = False
 
 
 class PressEnter2ExitGUI(multiprocessing.Process):
@@ -31,12 +39,14 @@ class PressEnter2ExitGUI(multiprocessing.Process):
         pop up a dialog box and return when the user has closed it
         """
         response = None
-        root = tkinter.Tk()
-        root.withdraw()
-        while response is not True:
-            response = tkinter.messagebox.askokcancel(title=self.title, message=self.pre_message)
-        if self.post_message:
-            print(self.post_message)
+        if tkinter_found:
+            root = tkinter.Tk()
+            root.withdraw()
+            while response is not True:
+                response = tkinter.messagebox.askokcancel(title=self.title, message=self.pre_message)
+        else:
+            log = logging.getLogger(__application_name__)
+            log.fatal("tkinter not found")
         self.exit_time = time.time()
 
     def get_start_time(self) -> float:
