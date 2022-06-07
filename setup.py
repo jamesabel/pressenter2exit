@@ -15,9 +15,9 @@ setup(
     license="MIT License",
     url="https://github.com/jamesabel/pressenter2exit",
     download_url="https://github.com/jamesabel/pressenter2exit/archive/master.zip",
-    keywords=["cli", "exit", "control"],
+    keywords=["cli", "gui", "exit", "control"],
     packages=[__application_name__],
-    package_data={"": ["index.rst"]},
+    package_data={__application_name__: ["index.rst", "py.typed"]},
     install_requires=[],
     classifiers=[],
 )
