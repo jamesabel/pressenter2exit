@@ -1,6 +1,7 @@
 ismain
 black
 wheel
+twine
 flake8
 mypy
 pytest
