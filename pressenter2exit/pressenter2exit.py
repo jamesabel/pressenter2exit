@@ -1,6 +1,6 @@
-
 import time
 import threading
+from typing import Union
 
 
 class PressEnter2Exit(threading.Thread):
@@ -10,7 +10,8 @@ class PressEnter2Exit(threading.Thread):
     Do *NOT* use this class if your program creates processes.  Use PressEnter2ExitGUI instead.
 
     """
-    def __init__(self, post_message: str = 'Enter pressed', pre_message: str = 'Press enter to exit:'):
+
+    def __init__(self, post_message: str = "Enter pressed", pre_message: str = "Press enter to exit:"):
         """
         constructor
 
@@ -50,7 +51,7 @@ class PressEnter2Exit(threading.Thread):
         """
         return self.start_time
 
-    def get_enter_duration(self) -> (float, None):
+    def get_enter_duration(self) -> Union[float, None]:
         """
         time from instantiation to when enter was pressed
 

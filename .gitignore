@@ -161,8 +161,7 @@ pypi_register.sh
 # since we only need regular python (no packages) don't both to put make_venv.sh on git
 # (even though I use a venv anyway so I have the latest setuptools, etc.)
 make_venv*.sh
-.idea/**/*.xml
-.idea/*.iml
+.idea/
 requirements.txt
 !test/requirements.txt
 make_venv*.bat

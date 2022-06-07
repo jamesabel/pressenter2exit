@@ -1,0 +1,6 @@
+ismain
+black
+wheel
+flake8
+mypy
+pytest

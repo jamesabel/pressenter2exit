@@ -1,13 +1,14 @@
-
 import time
 import multiprocessing
 import logging
+from typing import Union
 
 from pressenter2exit import __application_name__
 
 try:
     import tkinter.messagebox
     import tkinter
+
     tkinter_found = True
 except ModuleNotFoundError:
     tkinter_found = False
@@ -19,7 +20,8 @@ class PressEnter2ExitGUI(multiprocessing.Process):
 
     Supports programs that create processes.
     """
-    def __init__(self, post_message: str = 'Exiting', pre_message: str = 'Exit?', title: str = None):
+
+    def __init__(self, post_message: str = "Exiting", pre_message: str = "Exit?", title: str = None):
         """
         constructor
 
@@ -57,7 +59,7 @@ class PressEnter2ExitGUI(multiprocessing.Process):
         """
         return self.start_time
 
-    def get_enter_duration(self) -> (float, None):
+    def get_enter_duration(self) -> Union[float, None]:
         """
         time from instantiation to when enter was pressed
 
