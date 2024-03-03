@@ -1,11 +1,9 @@
-
 from time import time
 
 from pressenter2exit import PressEnter2Exit
 
 
 def test_pressenter2exit():
-
     # Pass -s to pytest if you get:
     #   OSError: reading from stdin while output is captured
     # This will cause the pytest run to ignore user input and use the "time out" feature, but it will at least run.

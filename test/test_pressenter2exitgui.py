@@ -1,11 +1,9 @@
-
 from time import time
 
 from pressenter2exit import PressEnter2ExitGUI, __application_name__
 
 
 def test_pressenter2exitgui():
-
     start_time = time()
     timeout = 5.0
 
