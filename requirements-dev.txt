@@ -5,3 +5,6 @@ twine
 flake8
 mypy
 pytest
+pytest-xdist
+pytest-threadleak
+pytest-pycharm
