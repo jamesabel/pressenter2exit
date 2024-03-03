@@ -162,7 +162,6 @@ make_venv*.sh
 .idea/
 requirements.txt
 !test/requirements.txt
-make_venv*.bat
 set_home_path.bat
 todo/
 LICENSE.txt
